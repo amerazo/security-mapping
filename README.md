@@ -14,22 +14,22 @@ The Control Mapping Platform assists security organizations in aligning their de
 
 ## Route Table
 
-## Route Table
+| Route                           | Folder/Controller             | EJS View File                   | Purpose/Description                             |
+|---------------------------------|-------------------------------|---------------------------------|-------------------------------------------------|
+| `/`                             | `views/home.ejs`              | N/A                             | Home Page - Application's Home Page              |
+| `/about`                        | `views/about.ejs`             | N/A                             | About Page - About Page                          |
+| `/support`                      | `views/support.ejs`           | N/A                             | Support Page - Support Page                      |
+| `/threats`                      | `controllers/threatController.js` | `views/threats/threatsForm.ejs` | Threats Form/List - List of Threats and Form for Creating a New Threat   |
+| `/threats/:threatID`            | `controllers/threatController.js` | `views/threats/threatsView.ejs` | Viewing Threat Details - View Details of a Threat |
+| `/threats/:threatID/edit`       | `controllers/threatController.js` | `views/threats/threatsEdit.ejs` | Editing Threat Details - Edit Details of a Threat |
+| `/threats/new`                  | `controllers/threatController.js` | `views/threats/threatsNew.ejs`  | Creating a New Threat - Create a New Threat      |
+| `/controls`                     | `controllers/controlController.js`| `views/controls/controlsForm.ejs` | Controls Form/List - List of Controls and Form for Creating a New Control |
+| `/controls/:controlID`          | `controllers/controlController.js`| `views/controls/controlsView.ejs` | Viewing Control Details - View Details of a Control |
+| `/controls/:controlID/edit`     | `controllers/controlController.js`| `views/controls/controlsEdit.ejs` | Editing Control Details - Edit Details of a Control |
+| `/controls/new`                 | `controllers/controlController.js`| `views/controls/controlsNew.ejs`  | Creating a New Control - Create a New Control    |
+| `/tools`                        | `views/tools.ejs`              | N/A                             | Tools Page - Tools Page                          |
 
-## Route Table
-
-| Route                            | Description                                         |
-|----------------------------------|-----------------------------------------------------|
-| `/`                              | Home Page                                           |
-| `/about`                         | About Page                                          |
-| `/support`                       | Support Page                                        |
-| `/threats`                       | List of Threats                                     |
-| `/threats/:threatID`             | View Threat Details                                 |
-| `/threats/:threatID/controls`    | List Controls for a Threat                          |
-| `/threats/:threatID/controls/new`| Create a New Control for a Threat                   |
-| `/threats/:threatID/edit`        | Edit Threat Details                                 |
-| `/threats/:threatID/controls/:controlID/edit` | Edit Control Details for a Threat |
-                    |
+**Purpose/Description** 
 
 
               +-------------------+
