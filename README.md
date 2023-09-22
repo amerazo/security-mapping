@@ -25,6 +25,28 @@
 | `/controls/:controlID/edit` | Edit Control Details                               |
 
 
+              +-------------------+
+              |     Threats       |
+              +-------------------+
+              | - threatID        |
+              | - name            |
+              | - description     |
+              +-------------------+
+                     |
+                     |
+                     |
+                     v
+              +-------------------+
+              |     Controls      |
+              +-------------------+
+              | - controlID       |
+              | - name            |
+              | - description     |
+              | - framework       |
+              | - implementation  |
+              +-------------------+
+
+
 ## MVP Goals
 
 **Schemas and Data Entry:**
