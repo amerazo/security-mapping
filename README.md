@@ -9,6 +9,8 @@
 
 ## Route Table
 
+## Route Table
+
 | Route                   | Description                                          |
 |-------------------------|------------------------------------------------------|
 | `/`                     | Home Page                                            |
@@ -17,6 +19,11 @@
 | `/threats`              | List of Threats                                      |
 | `/threats/:threatID`    | View Threat Details                                  |
 | `/threats/:threatID/controls` | View Controls Mapped to Threat to Mitigate Risks |
+| `/threats/new`          | Create a New Threat                                  |
+| `/controls/new`         | Create a New Control                                 |
+| `/threats/:threatID/edit` | Edit Threat Details                                |
+| `/controls/:controlID/edit` | Edit Control Details                               |
+
 
 ## MVP Goals
 
