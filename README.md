@@ -1,5 +1,10 @@
 # Control Mapping Platform
 
+## Purpose
+
+The Control Mapping Platform assists security organizations in aligning their defenses with evolving threats and diverse compliance frameworks. It provides a centralized hub for understanding threats, mapping controls, and maintaining compliance with standards like ISO, PCI, NIST, and more. By offering clarity on which controls effectively mitigate specific threats, the platform empowers security professionals to make informed decisions, enhancing cybersecurity resilience.
+
+
 ![Wireframe](https://media.git.generalassemb.ly/user/47378/files/18201dbb-b315-4ed8-9e83-ce498def784f)
 
 ## Languages Used
