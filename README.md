@@ -16,18 +16,20 @@ The Control Mapping Platform assists security organizations in aligning their de
 
 ## Route Table
 
-| Route                   | Description                                          |
-|-------------------------|------------------------------------------------------|
-| `/`                     | Home Page                                            |
-| `/about`                | About Page                                           |
-| `/support`              | Support Page                                         |
-| `/threats`              | List of Threats                                      |
-| `/threats/:threatID`    | View Threat Details                                  |
-| `/threats/:threatID/controls` | View Controls Mapped to Threat to Mitigate Risks |
-| `/threats/new`          | Create a New Threat                                  |
-| `/controls/new`         | Create a New Control                                 |
-| `/threats/:threatID/edit` | Edit Threat Details                                |
-| `/controls/:controlID/edit` | Edit Control Details                               |
+## Route Table
+
+| Route                            | Description                                         |
+|----------------------------------|-----------------------------------------------------|
+| `/`                              | Home Page                                           |
+| `/about`                         | About Page                                          |
+| `/support`                       | Support Page                                        |
+| `/threats`                       | List of Threats                                     |
+| `/threats/:threatID`             | View Threat Details                                 |
+| `/threats/:threatID/controls`    | List Controls for a Threat                          |
+| `/threats/:threatID/controls/new`| Create a New Control for a Threat                   |
+| `/threats/:threatID/edit`        | Edit Threat Details                                 |
+| `/threats/:threatID/controls/:controlID/edit` | Edit Control Details for a Threat |
+                    |
 
 
               +-------------------+
