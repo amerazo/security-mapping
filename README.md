@@ -64,3 +64,9 @@ The Control Mapping Platform assists security organizations in aligning their de
 **EJS Partials Integration:**
 - Use EJS (Embedded JavaScript) partials for rendering common elements, such as headers, footers, and data display sections.
 
+
+## Dependencies
+
+To install the required dependencies, run the following command:
+
+npm install express mongoose ejs dotenv method-override 
