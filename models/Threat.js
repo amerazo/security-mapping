@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const threatSchema = new mongoose.Schema({
+
     ID: String,
     name: String,
     description: String,

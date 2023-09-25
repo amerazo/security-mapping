@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HEADER PARTIAL -->
+</head>
+<body>
+    <!-- NAV BAR PARTIAL -->
+    <div class="container">
+        <h1>Edit Threat</h1>
+        <form method="POST" action="/threats/<%= threat._id %>?_method=PUT">
+            <!-- ID -->
+            <div class="form-group">
+                <label for="ID">ID:</label>
+                <input type="text" id="ID" name="ID" class="form-input" value="<%= threat.ID %>" required>
+            </div>
+            <!-- NAME -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-input" value="<%= threat.name %>" required>
+            </div>
+            <!-- DESCRIPTION -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-input" required><%= threat.description %></textarea>
+            </div>
+            <!-- URL -->
+            <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="text" id="url" name="url" class="form-input" value="<%= threat.url %>">
+            </div>
+            <!-- VERSION -->
+            <div class="form-group">
+                <label for="version">Version:</label>
+                <input type="text" id="version" name="version" class="form-input" value="<%= threat.version %>">
+            </div>
+            <!-- TACTICS -->
+            <div class="form-group">
+                <label for="tactics">Tactics:</label>
+                <input type="text" id="tactics" name="tactics" class="form-input" value="<%= threat.tactics %>">
+            </div>
+            <!-- DETECTION -->
+            <div class="form-group">
+                <label for="detection">Detection:</label>
+                <textarea id="detection" name="detection" class="form-input"><%= threat.detection %></textarea>
+            </div>
+            <!-- PLATFORMS -->
+            <div class="form-group">
+                <label for="platforms">Platforms:</label>
+                <input type="text" id="platforms" name="platforms" class="form-input" value="<%= threat.platforms %>">
+            </div>
+            <!-- TACTIC TYPE -->
+            <div class="form-group">
+                <label for="tacticType">Tactic Type:</label>
+                <input type="text" id="tacticType" name="tacticType" class="form-input" value="<%= threat.tacticType %>">
+            </div>
+            <!-- MTC ID -->
+            <div class="form-group">
+                <label for="MTCID">MTC ID:</label>
+                <input type="text" id="MTCID" name="MTCID" class="form-input" value="<%= threat.MTCID %>">
+            </div>
+            <!-- RELATIONSHIP CITATIONS -->
+            <div class="form-group">
+                <label for="relationshipCitations">Relationship Citations:</label>
+                <textarea id="relationshipCitations" name="relationshipCitations" class="form-input"><%= threat.relationshipCitations %></textarea>
+            </div>
+            <button type="submit" class="update-button">Update Threat</button>
+        </form>
+    </div>
+    <!-- FOOTER PARTIAL -->
+</body>
+</html>

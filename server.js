@@ -1,24 +1,38 @@
-// LOAD ENV VARIABLES FROM .ENV FILE
+// SET UP
 require('dotenv').config(); 
-
-//SET UP
 const express = require('express');
-const app = express();
-const port = process.env.PORT 
+const path = require('path');
+const methodOverride = require('method-override');
 const db = require('./models');
-const threatSeedData = require('./models/seed');
+const app = express();
+app.use(methodOverride('_method'));
+
+
+// IMPORT THE CONTROLLERS
+const threatController = require('./controllers/threatController');
+
+//MIDDLEWARE
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }));
 
 //TEST HOME ROUTE
+// http://localhost:2000/
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-// DISPLAY SEED DATA
-app.get('/seed-data', (req, res) => {
-  res.json(threatSeedData);
+// USE THE CONTROLLERS
+app.use('/', threatController);
+
+//SUPPORT
+//http://localhost:2000/support
+app.get('/support', (req, res) => {
+  res.render('support'); 
 });
 
 //PORT CALL OUT
-app.listen(port, () => {
-  console.log(`RUNNING SERVER ON PORT... ${port}`);
+app.listen(process.env.PORT, function () {
+  console.log('LISTENING ON PORT', process.env.PORT);
 });
