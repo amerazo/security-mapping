@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Threat and Control Association Tool</title>
+    <script src="/public/js/tool.js"></script>
+    <a href="/excel" class="btn btn-excel">Export to Excel</a>
+</head>
+<body>
+    <h1>Threat and Control Association Tool</h1>
+
+    <!-- ASSOCIATION FORM -->
+    <form action="/tool" method="POST">
+        <label for="threat">Select Threat:</label>
+        <select id="threat" name="threatId">
+            <!-- DROPDOWN WITH AVAILABLE THREATS -->
+            <% threats.forEach(threat => { %>
+                <option value="<%= threat._id %>"><%= threat.name %></option>
+            <% }); %>
+        </select>
+    
+        <label for="control">Select Control:</label>
+        <select id="control" name="controlId">
+            <!-- DROPDOWN WITH AVAILABLE CONTROLS -->
+            <% controls.forEach(control => { %>
+                <option value="<%= control._id %>"><%= control.controlName %></option>
+            <% }); %>
+        </select>
+        <button type="submit">Create Association</button>
+    </form>    
+<!-- DISPLAY ASSOCIATIONS -->
+<div id="associations">
+    <h2>Associations:</h2>
+    <ul>
+        <% associations.forEach(association => { %>
+            <li>
+                Threat Name: <%= association.threat.name %> <!-- SHOW THREAT NAME -->
+                (ID: <%= association.threat._id %>) <!-- SHOW THREAT OBJECT ID -->
+                <br>
+                Control Name: <%= association.control.controlName %> <!-- SHOW CONTROLNAME -->
+                (ID: <%= association.control._id %>) <!-- SHOW CONTROL ID -->
+            </li>
+        <% }); %>
+    </ul>
+</div>
+</body>
+</html>

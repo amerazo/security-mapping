@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CREATE NEW CONTROL</title> 
+    <link rel="stylesheet" type="text/css" href="/css/controls.css"> 
+</head>
+<body>
+    <header> 
+        <h1>CREATE NEW CONTROL</h1> 
+    </header>
+    <nav> 
+        <a href="/controls">BACK TO CONTROLS</a> 
+    </nav>
+    <main> 
+    <!-- CREATE A FORM FOR USER INPUT && SPECIFIES THE ACTION -->
+        <form action="/controls" method="POST"> 
+            <label for="controlName">Control Name:</label> 
+            <input type="text" id="controlName" name="controlName" required> 
+            <label for="controlDescription">Control Description:</label> 
+            <!-- CREATES TEXTAREA INPUT FOR CONTROL DESCRIPTION -->
+            <textarea id="controlDescription" name="controlDescription" rows="4" cols="50"></textarea> 
+            <!-- DROP DOWN SELECT INPUT FOR SECURITY TYPE -->
+            <label for="securityType">Security Type:</label> 
+            <select id="securityType" name="securityType"> 
+                <option value="Administrative Control">Administrative Control</option> 
+            </select>
+            <label for="controlFramework">Control Framework:</label> 
+            <select id="controlFramework" name="controlFramework"> 
+                <option value="PCI DSS">PCI DSS</option> 
+            </select>
+            <label for="implementation">Implementation:</label> 
+            <select id="implementation" name="implementation"> 
+                <option value="Not Implemented">Not Implemented</option> 
+            </select>
+            <label for="notes">Notes:</label> 
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea> 
+            <button type="submit">Create Control</button> 
+        </form>
+    </main>
+    <footer> 
+    </footer>
+</body>
+</html>

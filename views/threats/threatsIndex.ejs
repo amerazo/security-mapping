@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IMPORTED CSS -->
+    <link rel="stylesheet" type="text/css" href="public/css/tool.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <section class="intro">
-        <h2>All Threats</h2>
-        <h3>List of Threats</h3>
+        <div class="container">
+            <h2>All Threats</h2>
+        </div>
     </section>
     <main>
-        <section class="threatListing">
-            <ul>
-                <% threats.forEach(threat => { %>
-                    <li>
-                        <figure>
-                            <figcaption>
-                                <!-- <strong> MAKES THINGS BOLD -->
-                                <h4><a href="/threats/<%= threat._id %>"><%= threat.name %></a></h4>
-                                <p><strong>Description:</strong> <%= threat.description %></p>
-                                <p><strong>URL:</strong> <%= threat.url %></p>
-                                <p><strong>Created:</strong> <%= threat.created.toDateString() %></p>
-                                <p><strong>Last Modified:</strong> <%= threat.lastModified.toDateString() %></p>
-                                <p><strong>Version:</strong> <%= threat.version %></p>
-                                <p><strong>Tactics:</strong> <%= threat.tactics %></p>
-                                <p><strong>Detection:</strong> <%= threat.detection %></p>
-                                <p><strong>Platforms:</strong> <%= threat.platforms %></p>
-                                <p><strong>Tactic Type:</strong> <%= threat.tacticType %></p>
-                                <p><strong>MTC ID:</strong> <%= threat.MTCID %></p>
-                                <p><strong>Relationship Citations:</strong> <%= threat.relationshipCitations %></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                <% }); %>
-            </ul>
-        </section>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>URL</th>
+                        <th>Created</th>
+                        <th>Last Modified</th>
+                        <th>Version</th>
+                        <th>Tactics</th>
+                        <th>Detection</th>
+                        <th>Platforms</th>
+                        <th>Tactic Type</th>
+                        <th>MTC ID</th>
+                        <th>Relationship Citations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% threats.forEach(threat => { %>
+                        <tr>
+                            <td><a href="/threats/<%= threat._id %>"><%= threat.name %></a></td>
+                            <td><%= threat.description %></td>
+                            <td><%= threat.url %></td>
+                            <td><%= threat.created.toDateString() %></td>
+                            <td><%= threat.lastModified.toDateString() %></td>
+                            <td><%= threat.version %></td>
+                            <td><%= threat.tactics %></td>
+                            <td><%= threat.detection %></td>
+                            <td><%= threat.platforms %></td>
+                            <td><%= threat.tacticType %></td>
+                            <td><%= threat.MTCID %></td>
+                            <td><%= threat.relationshipCitations %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 </html>

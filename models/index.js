@@ -14,5 +14,8 @@ db.on('connected', function () {
 // EXPORT THE MODELS
 module.exports = {
     Threat: require('./Threat'),
-    threatSeedData: require('./seed')
-};
+    Control: require('./Control'), 
+    threatSeedData: require('./seed'),
+    controlsSeedData: require('./controls-seed'),
+    Mapping: require('./Mapping')
+  };
