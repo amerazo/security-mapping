@@ -1,5 +1,4 @@
 // SET UP
-const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
@@ -104,7 +103,6 @@ res.setHeader('Content-Disposition', 'attachment; filename=associations.xlsx');
   await workbook.xlsx.write(res);
   res.end();
 });
-
 
 //PORT 
 app.listen(process.env.PORT, function () {
