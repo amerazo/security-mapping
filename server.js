@@ -36,7 +36,7 @@ app.get('/support', (req, res) => {
   res.render('support'); 
 });
 
-//SUPPORT
+//ABOUT
 //http://localhost:2000/about
 app.get('/about', (req, res) => {
   res.render('about'); 

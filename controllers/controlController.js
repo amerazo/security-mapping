@@ -31,6 +31,7 @@ router.post('/', async (req, res) => {
 });
 
 // CONTROL SEED ROUTE: 
+// http://localhost:2000/controls/control-seed
 router.get('/control-seed', async (req, res) => {
     // REMOVE ALL EXISTING CONTROLS FROM THE DB
     const removedControls = await Control.deleteMany({}); 
