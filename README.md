@@ -31,7 +31,7 @@ The Control Mapping Platform assists security organizations in aligning their de
 | `/controls/:controlID`          | `controllers/controlController.js`| `views/controls/controlsView.ejs` | Viewing Control Details - View Details of a Control |
 | `/controls/:controlID/edit`     | `controllers/controlController.js`| `views/controls/controlsEdit.ejs` | Editing Control Details - Edit Details of a Control |
 | `/controls/new`                 | `controllers/controlController.js`| `views/controls/controlsNew.ejs`  | Creating a New Control - Create a New Control    |
-| `/tools`                        | `views/tools.ejs`              | N/A                             | Tools Page - Tools Page                          |
+| `/tool`                        | `views/tool.ejs`              | N/A                             | Tools Page - Tools Page                          |
 
 **Purpose/Description** 
 
