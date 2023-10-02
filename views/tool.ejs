@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Threat and Control Association Tool</title>
-    <script src="/public/js/tool.js"></script>
-    <a href="/excel" class="btn btn-excel">Export to Excel</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/tool.css">
+    <title>SECURITY CONTROL MAPPING TOOL</title>
+    <%- include('partials/nav.ejs') %>
 </head>
-<body>
-    <h1>Threat and Control Association Tool</h1>
-
+    <h1>THREAT & CONTROL ASSOCIATION TOOL</h1>
     <!-- ASSOCIATION FORM -->
     <form action="/tool" method="POST">
         <label for="threat">Select Threat:</label>
@@ -17,30 +17,35 @@
                 <option value="<%= threat._id %>"><%= threat.name %></option>
             <% }); %>
         </select>
-    
-        <label for="control">Select Control:</label>
+        <label for="control">SELECT CONTROL:</label>
         <select id="control" name="controlId">
             <!-- DROPDOWN WITH AVAILABLE CONTROLS -->
             <% controls.forEach(control => { %>
                 <option value="<%= control._id %>"><%= control.controlName %></option>
             <% }); %>
         </select>
-        <button type="submit">Create Association</button>
+        <button type="submit">CREATE ASSOCIATION</button>
+        <a href="/excel" class="btn btn-excel">EXPORT TO EXCEL</a>
     </form>    
 <!-- DISPLAY ASSOCIATIONS -->
 <div id="associations">
-    <h2>Associations:</h2>
+    <h1>ASSOCIATIONS</h1>
+    <a class="action-button" href="/threats">THREATS COLLECTION</a>
+    <a class="action-button" href="/controls">CONTROLS COLLECTION</a>
     <ul>
         <% associations.forEach(association => { %>
             <li>
-                Threat Name: <%= association.threat.name %> <!-- SHOW THREAT NAME -->
-                (ID: <%= association.threat._id %>) <!-- SHOW THREAT OBJECT ID -->
+                Threat Name: <%= association.threat ? association.threat.name : 'N/A' %> <!-- SHOW THREAT NAME -->
+                (ID: <%= association.threat ? association.threat._id : 'N/A' %>) <!-- SHOW THREAT OBJECT ID -->
                 <br>
-                Control Name: <%= association.control.controlName %> <!-- SHOW CONTROLNAME -->
-                (ID: <%= association.control._id %>) <!-- SHOW CONTROL ID -->
+                Control Name: <%= association.control ? association.control.controlName : 'N/A' %> <!-- SHOW CONTROL NAME -->
+                (ID: <%= association.control ? association.control._id : 'N/A' %>) <!-- SHOW CONTROL ID -->
             </li>
         <% }); %>
     </ul>
 </div>
 </body>
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
 </html>

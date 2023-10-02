@@ -7,6 +7,10 @@ The Control Mapping Platform assists security organizations in aligning their de
 
 ![Wireframe](https://media.git.generalassemb.ly/user/47378/files/18201dbb-b315-4ed8-9e83-ce498def784f)
 
+
+
+![COLOR](https://i.imgur.com/sfgKVVq.png)
+
 ## Languages Used
 - Node.js
 - Express

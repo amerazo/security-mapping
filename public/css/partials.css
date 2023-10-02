@@ -1,0 +1,108 @@
+nav {
+    background-color: #668aab;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    max-height: 50px;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3a5d7d; 
+}
+
+footer {
+    background-color: #668aab;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media a {
+    margin: 10px; 
+}
+
+/* SOCIAL MEDIA ICONS WARPED == FIXED */
+.social-media img {
+    max-width: 40px; 
+    height: auto; 
+}
+
+
+/* HIDE THE CHECKBOX INPUT */
+.nav-toggle {
+    display: none; 
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color:  #668aab;
+}
+
+/* SHOW NAV BAR HAMBURGER MENU COLOR */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f1614a;
+    margin: 4px 0;
+}
+
+/* DISPLAY NAV MENU WHEN CHECKED */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:checked */
+.nav-toggle:checked ~ .nav-menu {
+    display: block;
+}
+
+
+.nav-menu {
+    display: none; 
+    background-color: #3A5D7D;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+

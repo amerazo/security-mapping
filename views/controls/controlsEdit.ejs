@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Control</title>
+    <link rel="stylesheet" type="text/css" href="/css/controls.css">
 </head>
 <body>
     <header>
         <h1>Edit Control</h1>
     </header>
     <nav>
-        <!-- NAV BACK TO THE CONTROLS PAGE -->
-        <a href="/controls">Back to Controls</a> 
+        <!-- GO TO CONTROLS HOME PAGE -->
+        <a href="/controls">Back to Controls</a>
     </nav>
     <main>
         <form action="/controls/<%= control._id %>?_method=PUT" method="POST">
-            <!-- FORM: EDIT CONTROL DETAILZ -->
+            <label for="controlIdentifier">Control Identifier:</label>
+            <input type="text" id="controlIdentifier" name="controlIdentifier" value="<%= control.controlIdentifier %>" required>
             <label for="controlName">Control Name:</label>
             <input type="text" id="controlName" name="controlName" value="<%= control.controlName %>" required>
-            <!-- INPUT FIELD FOR EDITING controlName -->
-            <label for="controlDescription">Control Description:</label>
-            <textarea id="controlDescription" name="controlDescription" rows="4" cols="50"><%= control.controlDescription %></textarea>
-            <!-- CONTROL DESCRIPTION TEXT AREA -->
+            <label for="controlText">Control Text:</label>
+            <textarea id="controlText" name="controlText" rows="4" cols="50" required><%= control.controlText %></textarea>
+            <label for="discussion">Discussion:</label>
+            <textarea id="discussion" name="discussion" rows="4" cols="50" required><%= control.discussion %></textarea>
+            <label for="relatedControls">Related Controls:</label>
+            <input type="text" id="relatedControls" name="relatedControls" value="<%= control.relatedControls %>">
             <label for="securityType">Security Type:</label>
             <select id="securityType" name="securityType">
-            <!-- DROP DOWN MENU FOR SECURITY TYPE -->
-            <option value="Administrative Control" <%= control.securityType === "Administrative Control" ? "selected" : "" %>>Administrative Control</option>
-            <option value="Physical Control" <%= control.securityType === "Physical Control" ? "selected" : "" %>>Physical Control</option>
-            <option value="Technical Control" <%= control.securityType === "Technical Control" ? "selected" : "" %>>Technical Control</option>
+                <option value="Administrative Control" <%= control.securityType === "Administrative Control" ? "selected" : "" %>>Administrative Control</option>
+                <option value="Physical Control" <%= control.securityType === "Physical Control" ? "selected" : "" %>>Physical Control</option>
+                <option value="Technical Control" <%= control.securityType === "Technical Control" ? "selected" : "" %>>Technical Control</option>
             </select>
             <label for="controlFramework">Control Framework:</label>
             <select id="controlFramework" name="controlFramework">
-              <!-- DROPDOWN MENU FOR SELECTING CONTROL FRAMEWORK -->
                 <option value="PCI DSS" <%= control.controlFramework === "PCI DSS" ? "selected" : "" %>>PCI DSS</option>
                 <option value="ISO 27001" <%= control.controlFramework === "ISO 27001" ? "selected" : "" %>>ISO 27001</option>
                 <option value="NIST SP 800-53" <%= control.controlFramework === "NIST SP 800-53" ? "selected" : "" %>>NIST SP 800-53</option>
@@ -41,17 +43,14 @@
             </select>
             <label for="implementation">Implementation:</label>
             <select id="implementation" name="implementation">
-                <!-- DROPDOWN MENU FOR SELECTING IMPLEMENTATION STATUS -->
                 <option value="Not Implemented" <%= control.implementation === "Not Implemented" ? "selected" : "" %>>Not Implemented</option>
                 <option value="Fully Implemented" <%= control.implementation === "Fully Implemented" ? "selected" : "" %>>Fully Implemented</option>
                 <option value="Partially Implemented" <%= control.implementation === "Partially Implemented" ? "selected" : "" %>>Partially Implemented</option>
                 <option value="On the Roadmap" <%= control.implementation === "On the Roadmap" ? "selected" : "" %>>On the Roadmap</option>
             </select>
-            <!-- EDIT CONTROL DETAILS TEXT AREA -->
             <label for="notes">Notes:</label>
             <textarea id="notes" name="notes" rows="4" cols="50"><%= control.notes %></textarea>
-            <!-- SUBMIT BUTTON TO UPDATE CONTROL DETZ -->
-            <button type="submit">Update Control</button> 
+            <button type="submit">Update Control</button>
         </form>
     </main>
     <footer>

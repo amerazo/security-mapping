@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- IMPORTED CSS -->
-    <link rel="stylesheet" type="text/css" href="public/css/tool.css">
+    <title>All Threats</title>
+    <!-- EXTERNAL CSS TO STYLE IN PUBLIC FOLDER -->
+    <link rel="stylesheet" type="text/css" href="/css/threats.css">
+    <!-- BOOTSTRAP CSS IMPORT -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <section class="intro">
-        <div class="container">
-            <h2>All Threats</h2>
-        </div>
-    </section>
-    <main>
-        <div class="container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>URL</th>
-                        <th>Created</th>
-                        <th>Last Modified</th>
-                        <th>Version</th>
-                        <th>Tactics</th>
-                        <th>Detection</th>
-                        <th>Platforms</th>
-                        <th>Tactic Type</th>
-                        <th>MTC ID</th>
-                        <th>Relationship Citations</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% threats.forEach(threat => { %>
-                        <tr>
-                            <td><a href="/threats/<%= threat._id %>"><%= threat.name %></a></td>
-                            <td><%= threat.description %></td>
-                            <td><%= threat.url %></td>
-                            <td><%= threat.created.toDateString() %></td>
-                            <td><%= threat.lastModified.toDateString() %></td>
-                            <td><%= threat.version %></td>
-                            <td><%= threat.tactics %></td>
-                            <td><%= threat.detection %></td>
-                            <td><%= threat.platforms %></td>
-                            <td><%= threat.tacticType %></td>
-                            <td><%= threat.MTCID %></td>
-                            <td><%= threat.relationshipCitations %></td>
-                        </tr>
-                    <% }); %>
-                </tbody>
-            </table>
-        </div>
-    </main>
+<h1>All Threats</h1>
+<!-- LINK TO CREATE NEW CONTROL-->
+<button class="new-button"><a href="/threats/new">CREATE NEW THREAT</a></button>
+<button class="new-button"><a href="/">HOME</a></button>
+<button class="new-button"><a href="/tool">TOOL</a></button>
+<!-- CREATE TABLE TO DISPLAY CONTROL DATA -->
+<table>
+    <thead>
+    <tr>
+        <!-- TABLE HEADERS FOR ATTRIBUTES -->
+        <th>Name</th>
+        <th>Description</th>
+        <th>URL</th>
+        <th>Created</th>
+        <th>Last Modified</th>
+        <th>Version</th>
+        <th>Tactics</th>
+        <th>Detection</th>
+        <th>Platforms</th>
+        <th>Tactic Type</th>
+        <th>MTC ID</th>
+        <th>Relationship Citations</th>
+    </tr>
+</thead>
+<tbody>
+    <!-- ITERATE THROUGH EACH CONTROL WITHIN THE LIST -->
+    <% threats.forEach(threat => { %>
+        <tr>
+            <td><a href="/threats/<%= threat._id %>"><%= threat.name %></a></td>
+            <td><%= threat.description %></td>
+            <td><%= threat.url %></td>
+            <td><%= threat.created.toDateString() %></td>
+            <td><%= threat.lastModified.toDateString() %></td>
+            <td><%= threat.version %></td>
+            <td><%= threat.tactics %></td>
+            <td><%= threat.detection %></td>
+            <td><%= threat.platforms %></td>
+            <td><%= threat.tacticType %></td>
+            <td><%= threat.MTCID %></td>
+            <td><%= threat.relationshipCitations %></td>
+        </tr>
+        <% }); %>
+        </tbody>
+        </table>
 </body>
 </html>

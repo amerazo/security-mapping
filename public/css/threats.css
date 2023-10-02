@@ -3,7 +3,7 @@ body {
     background-color: #e2ebf4;
     margin: 0;
     padding: 0;
-    line-height: 1.5px;
+    line-height: 1.5; 
 }
 
 h1 {
@@ -84,8 +84,6 @@ p strong {
 .action-button:hover {
     background-color: #1e2e3c;
 }
-
-/* ////////////////////////////////////////////////// */
 
 /* NEW FORM CONTAINER */
 .container {

@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
     <title>SECURITY CONTROL MAPPING TOOL</title>
+    <%- include('partials/nav.ejs') %>
 </head>
 <body>
-    <%- include('partials/nav.ejs') %>
-    <main>
-        <section class="container">
-            <h1>Security Control Mapping Tool</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor urna id odio eleifend, vitae commodo massa sodales.</p>
-            <a href="/threats" class="btn btn-index">View All Threats</a>
-        </section>
-    </main>
+    <section class="landing">
+        <div class="landing-content">
+            <h1>SECURITY CONTROL MAPPING TOOL</h1>
+            <p>Introducing our Security Control Mapping Tool, a powerful solution designed to streamline the process of mapping various security compliance control frameworks to potential threats. In today's complex cybersecurity landscape, it's crucial to have a tool that simplifies the task of aligning security controls with potential vulnerabilities. Our tool empowers you to effortlessly navigate and understand the intricate web of security controls, making it easier than ever to enhance your organization's security posture and resilience against emerging threats.</p>
+            <a href="/tool" class="action-button">DEMO OUR TOOL</a>
+                <a class="action-button" href="/threats">THREATS COLLECTION</a>
+                <a class="action-button" href="/controls">CONTROLS COLLECTION</a>
+        </div>
+        <!-- IMAGE CONTAINER FOR HOME PAGE -->
+        <div class="image-container">
+            <!-- IMAGE INSERT URL-->
+            <img src="https://www.fbi.gov/@@dvpdffiles/4/a/4ab863515a3041a5b869c1cc322829ad/normal/dump_3.gif" alt="Your Image">
+        </div>
+    </section>
+    <footer>
+        <%- include('partials/footer.ejs') %>
+    </footer>
 </body>
-<footer>
-    <%- include('partials/footer.ejs') %>
-</footer>
 </html>

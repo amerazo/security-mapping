@@ -1,9 +1,77 @@
-
-.card {
-  height: 100%;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e2ebf4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
-.card-body {
-  height: 100%; 
-  overflow: auto; 
+h1 {
+  background-color: #3a5d7d;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
+
+/* FORM CONTAINER STYLING */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* FORM LABEL STYLING */
+label {
+  display: block;
+  margin-bottom: 10px; 
+  font-weight: bold;
+  color: #3a5d7d; 
+}
+
+/* FORM INPUTS && SELECTED DROPDOWNS */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #3a5d7d; 
+}
+
+
+.btn-excel, .action-button, button[type="submit"] {
+  background-color: #f1614a;
+  color: #e2ebf4;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px; /* MARGIN B/W BUTTONS */
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  display: inline-block; /* SPACE B/W BUTTONS STACK ONTOP OF EACH OTHER */
+}
+
+.btn-excel, .action-button, button[type="submit"] {
+  background-color: #1e2e3c;
+}
+
+
+/* LIST OF ASSOCIATIONS */
+#associations {
+  margin-top: 20px;
+}
+
+/* LIST ITEMS IN ASSOCIATION */
+#associations ul li {
+  list-style: none; /* TO REMOVE BULLET POINTS */
+  margin-bottom: 10px;
+  border: 1px solid #3a5d7d; 
+  padding: 10px;
+  border-radius: 5px;
+}
+

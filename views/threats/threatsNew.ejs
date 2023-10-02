@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- PARTIALS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Threat</title>
+    <link rel="stylesheet" type="text/css" href="/css/threats.css">
 </head>
 <body>
-   <!-- NAV BAR -->
-    <div class="container">
-        <h1>Add a New Threat</h1>
-        <form method="POST" action="/threats">
+    <header>
+        <h1>Create New Threat</h1>
+    </header>
+    <main>
+        <!-- NEW FORM -->
+        <form action="/threats" method="POST">
             <!-- ID -->
             <div class="form-group">
                 <label for="ID">ID:</label>
@@ -64,8 +69,8 @@
                 <textarea id="relationshipCitations" name="relationshipCitations" class="form-input"></textarea>
             </div>
             <button type="submit" class="btn btn-create">Create Threat</button>
+            <a class="action-button" href="/threats">Back to Threats</a>
         </form>
-    </div>
-    <!-- FOOTER -->
+        </main>
 </body>
 </html>

@@ -16,14 +16,15 @@ const controlController = require('./controllers/controlController');
 //MIDDLEWARE
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-//TEST HOME ROUTE
+//HOME ROUTE
 // http://localhost:2000/
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.render('home'); 
 });
+
 
 // USE THE CONTROLLERS
 app.use('/', threatController);

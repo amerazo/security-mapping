@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- HEADER PARTIAL -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Threat</title>
+    <link rel="stylesheet" type="text/css" href="/css/threats.css">
 </head>
 <body>
-    <!-- NAV BAR PARTIAL -->
-    <div class="container">
+    <header>
         <h1>Edit Threat</h1>
+    </header>
+    <nav>
+        <!-- GO TO THREATS HOME PAGE -->
+    </nav>
+    <main>
+    <div class="container">
         <form method="POST" action="/threats/<%= threat._id %>?_method=PUT">
             <!-- ID -->
             <div class="form-group">
@@ -64,8 +72,9 @@
                 <textarea id="relationshipCitations" name="relationshipCitations" class="form-input"><%= threat.relationshipCitations %></textarea>
             </div>
             <button type="submit" class="update-button">Update Threat</button>
+            <a class="action-button" href="/threats">Back to Threats</a>
         </form>
+    </main>
     </div>
-    <!-- FOOTER PARTIAL -->
 </body>
 </html>

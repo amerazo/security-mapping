@@ -1,0 +1,12 @@
+.support {
+    background-color: #e2ebf4; /* BACKGROUND COLOR WHOLE PAGE */
+    font-family: Arial, sans-serif;
+}
+
+.support-section {
+    background-color: #fff; /* BACKGROUND COLOR FOR EACH INDIVIDUAL SECTION */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px; 
+}
+

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/controls.css"> 
 </head>
 <body>
     <h1>Control Details</h1>
@@ -18,14 +19,17 @@
     <p><strong>Notes:</strong> <%= control.notes %></p>
     <p><strong>Created:</strong> <%= control.created %></p>
     <p><strong>Last Modified:</strong> <%= control.lastModified %></p>
-    
-    <!-- LINK TO EDIT CONTROL -->
-    <a href="/controls/<%= control._id %>/edit">Edit Control</a>
-    <!-- FORM TO DELETE CONTROL METHOD OVERRRIDE-->
-    <form action="/controls/<%= control._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete Control</button>
-    </form>
-    <!-- LINK TO NAV BACK TO CONTROLS PAGE -->
-    <a href="/controls">Back to Controls</a>
+    <div class="button-group">
+        <!-- LINK TO EDIT CONTROL -->
+        <a class="action-button" href="/controls/<%= control._id %>/edit">Edit Control</a>
+        <!-- FORM TO DELETE CONTROL METHOD OVERRIDE-->
+        <form action="/controls/<%= control._id %>?_method=DELETE" method="POST">
+        <button class="action-button" type="submit">Delete Control</button>
+        </form>
+        <!-- LINK TO CREATE NEW CONTROL-->
+        <a class="action-button" href="/controls/new">Create New Control</a></button>
+        <!-- LINK TO NAV BACK TO CONTROLS PAGE -->
+        <a class="action-button" href="/controls">Back to Controls</a>
+    </div>
 </body>
 </html>

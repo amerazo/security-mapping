@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THREAT DETAILS</title>
-    <!-- BOOTSTRAP CSS IMPORT -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Threat Details</title>
+    <link rel="stylesheet" type="text/css" href="/css/threats.css"> 
 </head>
 <body>
-    <div class="container">
+    <h1>Threats Details</h1>
         <h2 class="threat-name"><%= threat.name %></h2>
-        <div class="card">
-            <div class="card-body">
                 <p><strong>Description:</strong> <%= threat.description %></p>
                 <p><strong>URL:</strong> <%= threat.url %></p>
                 <p><strong>Created:</strong> <%= threat.created.toDateString() %></p>
@@ -23,15 +20,17 @@
                 <p><strong>Tactic Type:</strong> <%= threat.tacticType %></p>
                 <p><strong>MTC ID:</strong> <%= threat.MTCID %></p>
                 <p><strong>Relationship Citations:</strong> <%= threat.relationshipCitations %></p>
-            </div>
-        </div>
-        <!-- EDIT & DELETE BUTTONS -->
-        <a href="/threats/<%= threat._id %>/edit" class="btn btn-primary">Edit Threat</a>
-        <form method="POST" action="/threats/<%= threat._id %>?_method=DELETE" class="delete-form">
-            <button type="submit" class="btn btn-danger">Delete Threat</button>
-        </form>
-    </div>
+<div class="button-group">
+<!-- LINK TO EDIT THREAT -->
+<a class="action-button" href="/threats/<%= threat._id %>/edit">EDIT THREAT</a>
+<!-- FORM TO DELETE THREAT METHOD OVERRIDE-->
+<form action="/threats/<%= threat._id %>?_method=DELETE" method="POST">
+<button class="action-button" type="submit">DELETE THREAT</button>
+</form>
+<!-- LINK TO CREATE NEW CONTROL-->
+<a class="action-button" href="/threats/new">CREATE NEW THREAT</a></button>
+<!-- LINK TO NAV BACK TO CONTROLS PAGE -->
+<a class="action-button" href="/threats">BACK TO THREATS</a>
+</div>
 </body>
 </html>
-
-
